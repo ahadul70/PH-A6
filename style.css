@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
+
 }
 
 .btn_primary {
@@ -29,6 +29,11 @@
   text-align: center;
 }
 
+.heading2{
+  text-align: center;
+  color: white;
+}
+/*Navbar*/
 .navbar {
   display: flex;
   align-items: center;
@@ -97,7 +102,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #e6f4ea;
+flex-wrap: wrap;
   width: 100%;
 
   
@@ -109,7 +114,6 @@
 .about_section {
 
   align-items: center;
-  background-color: #cff0dc;
   width: 100%;
   ;
 
@@ -128,6 +132,7 @@
   justify-content: center;
   gap: 2rem;
   padding: 5% 10%;
+   flex-wrap: wrap;
 }
 
 .about_text h1 {
@@ -135,6 +140,12 @@
   font-size: 1rem;
   font-weight: 400;
 }
+.about_text{
+    max-width: 45%; 
+    
+}
+
+
 
 .about_text ul {
   list-style: disc;
@@ -142,12 +153,17 @@
   margin-top: 10px;
 }
 
+.about_img {
+  max-width: 45%;    
+  height: auto;
+  flex: 1;
+}
 
+/*impact Section*/
 
 .impact_section {
 
 
-  background-color: #CFF0DC;
   width: 100%;
 
 
@@ -164,6 +180,7 @@
   gap: 5rem;
   padding: 2% 10%;
   width: 100%;
+     flex-wrap: wrap;
 
 }
 .impact_stats div h1 {
@@ -181,4 +198,41 @@ background-color: white;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
+}
+
+
+/*plant_tree_section */
+
+.plant_tree_section {
+  width: 100%;
+  padding: 8rem 0rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5% 5%;
+  width: 50%;
+  margin: auto;
+  border-radius: 12px;
+  filter: drop-shadow(rgba(7, 7, 7, 0.185) 1rem 1rem 10px);
+  margin-top: 2rem;
+}
+.form input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+.form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
 }
