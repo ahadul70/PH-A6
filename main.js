@@ -7,9 +7,13 @@ const getplantbycatagory2 =
 const getplantdetails = "https://openapi.programming-hero.com/api/plant/${id}";
 const getplantdetails2 = "https://openapi.programming-hero.com/api/plant/1";
 
+let allPlants = [];
+let allCategories = [];
+
 const loadAllPlants = fetch(getplants)
   .then((res) => res.json())
   .then((data) => {
+        allPlants = data.plants;
     displayAllPlants(data.plants);
   })
   .catch((err) => console.error("Error fetching plants:", err));
@@ -72,22 +76,47 @@ const loadAllCatagory = fetch(getallcatagory)
   .then((res) => res.json())
   .then((data) => {
     console.log("Categories:", data);
+      allCategories = data.categories;
     displayAllCategories(data.categories);
   })
   .catch((err) => console.error("Error fetching categories:", err));
 
 const displayAllCategories = (categories) => {
   const postCategories = document.querySelector(".categories");
+    postCategories.innerHTML = "";
+
+const liAll = document.createElement("li");
+  liAll.innerText = "All Trees";
+  liAll.onclick = () => displayAllPlants(allPlants);
+  postCategories.appendChild(liAll);
+
+
 
   categories.forEach((category) => {
     const li = document.createElement("li");
     li.innerText = category.category_name;
+    li.onclick = () => filterPlantsByCategory(category.id); 
     postCategories.appendChild(li);
   });
 };
 
+const filterPlantsByCategory = (categoryId) => {
+  const filteredPlants = allPlants.filter(
+    (plant) => plant.category === categoryId
+  );
+  displayAllPlants(filteredPlants);
+};
+
+
+
+
+
+
+
+
+
 const categoryId = 1;
-fetch(`https://openapi.programming-hero.com/api/category/${categoryId}`)
+fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
   .then((res) => res.json())
   .then((data) => {
     console.log(`Plants in category ${categoryId}:`, data);
