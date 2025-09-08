@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn_primary {
+    padding: 10px 25px;
+    background: #facc15;
+    color: rgb(21, 128, 61);
+    ;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: rgb(21, 128, 61);
+    color: #ffffff;
+    width: 100%;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav_links h1 {
+    font-size: 0.9rem;
+}
+
+
+
+/*Hero Section*/
+.hero_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cff0dc;
+    width: 100%;
+}
+
+  .left {
+    flex: 0 0 20%;
+   
+  }
+
+
+  .center {
+    flex: 0 0 60%;
+   text-align: center;
+   
+  }
+  .center p {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .center button {
+    margin-top: 20px;
+  }
+  .right {
+    flex: 0 0 20%;
+
+  }  
+  
+  .left img, .right img {
+    width: 100%;
+    height: auto;
+  } 
+
+  /*Choose Trees Section*/
+  .choose_trees {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e6f4ea;
+    width: 100%;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .product_left ,.product_right{
+    text-align: center;
+  }
+
+
+
+  /*About Section*/
+  .about_section {  
+   
+    align-items: center;
+    background-color: #cff0dc;
+    width: 100%;
+    margin-top: 6rem;
+  
+  }
+
+  .about_section h1 {
+    text-align: center;
+margin-bottom: 1rem;
+ padding-top: 1rem; ;
+  }
+
+  .about_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5% 10%;
+  }
+
+  .about_text h1 {
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .about_text ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
