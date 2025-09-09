@@ -8,114 +8,118 @@
 </head>
 <body>
 
-  <nav class="navbar pri">
-    <div class="logo">Green Plant</div>
-    <div class="nav_links">
-      <h1>About</h1>
-      <h1>Gallery</h1>
-      <h1>Plant a Tree</h1>
+    <nav class="navbar pri">
+        <div class="logo">Green Plant</div>
+        <div class="nav_links">
+            <h1>About</h1>
+            <h1>Gallery</h1>
+            <h1>Plant a Tree</h1>
+        </div>
+        <div><button class="btn_primary">Plant a Tree</button></div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero_section light1">
+            <div class="left">
+                <img src="hero-leaf1.png" alt="Leaf Image 1">
+            </div>
+            <div class="center heading">
+                <h1>Plant a Tree, Grow a Future</h1>
+                <p>Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
+                <button class="btn_primary">Get Involved</button>
+            </div>
+            <div class="right">
+                <img src="hero-leaf2.png" alt="Leaf Image 2">
+            </div>
+        </section>
+
+        <!-- Choose Trees Section -->
+        <section class="choose_trees light2">
+            <div class="pleft heading">
+                <h1>Categories</h1>
+                <ul class="categories">
+                    <!-- Categories will be injected here dynamically -->
+                </ul>
+            </div>
+
+            <div class="center heading">
+                <h1>Choose Your Trees</h1>
+                <div id="spinner" class="spinner" style="display:none;"></div>
+                <div class="tree_cards">
+                    <!-- Plant cards will be injected here dynamically -->
+                </div>
+            </div>
+
+            <div class="pright heading">
+                <h1>Your Cart</h1>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about_section light1">
+            <h1 class="heading">About the Campaign</h1>
+            <div class="about_content">
+                <img src="about.png" alt="About Green Earth">
+                <div class="about_text">
+                    <h1>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</h1>
+                    <ul>
+                        <li>Restoration of natural habitats</li>
+                        <li>Improvement of air quality</li>
+                        <li>Support for local communities</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="impact_section light2">
+            <h1 class="heading">Our Impact</h1>
+            <div class="impact_stats">
+                <div class="children">
+                    <h1>500,000+</h1>
+                    <p>Trees Planted</p>
+                </div>
+                <div class="children">
+                    <h1>120+</h1>
+                    <p>Communities Reached</p>
+                </div>
+                <div class="children">
+                    <h1>50+</h1>
+                    <p>Countries Involved</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Plant a Tree Form -->
+        <section class="plant_tree_section mild">
+            <h1 class="heading2">Plant a Tree Today</h1>
+            <form action="" class="pri form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email Address">
+                <input type="text" placeholder="Number of Trees">
+                <button class="btn_primary">Donate Now</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="dark">
+        <h3 class="heading2">© 2025 Green Earth. All Rights Reserved.</h3>
+    </footer>
+
+    <!-- Modal (placed once globally at the end of body) -->
+    <div id="plantModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" alt="Plant Image" />
+            <p><strong>Category:</strong> <span id="modalCategory"></span></p>
+            <p><strong>Price:</strong> <span id="modalPrice"></span></p>
+            <p id="modalDescription"></p>
+        </div>
     </div>
-    <div><button class="btn_primary">Plant a Tree</button></div>
-  </nav>
 
-  <main>
-
-    <!-- Hero Section -->
-    <section class="hero_section light1">
-      <div class="left"><img src="hero-leaf1.png" alt=""></div>
-      <div class="center heading">
-        <h1>Plant a Tree, Grow a Future</h1>
-        <p>Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
-        <button class="btn_primary">Get Involved</button>
-      </div>
-      <div class="right"><img src="hero-leaf2.png" alt=""></div>
-    </section>
-
-    <!-- Choose Trees Section -->
-    <section class="choose_trees light2">
-      <div class="pleft heading">
-        <h1>Categories</h1>
-        <ul class="categories">
-          <!-- Categories will be injected here dynamically -->
-        </ul>
-      </div>
-
-      <div class="center heading">
-        <h1>Choose Your Trees</h1>
-        <div class="tree_cards">
-          <!-- Plant cards will be injected here dynamically -->
-        </div>
-      </div>
-
-      <div class="pright heading">
-        <h1>Your cart</h1>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about_section light1">
-      <h1 class="heading">About the Campaign</h1>
-      <div class="about_content">
-        <img src="about.png" alt="About Green Earth">
-        <div class="about_text">
-          <h1>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat global warming.</h1>
-          <ul>
-            <li>Restoration of natural habitats</li>
-            <li>Improvement of air quality</li>
-            <li>Support for local communities</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section class="impact_section light2">
-      <h1 class="heading">Our Impact</h1>
-      <div class="impact_stats">
-        <div class="children">
-          <h1>500,000+</h1>
-          <p>Trees Planted</p>
-        </div>
-        <div class="children">
-          <h1>120+</h1>
-          <p>Communities Reached</p>
-        </div>
-        <div class="children">
-          <h1>50+</h1>
-          <p>Countries Involved</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Plant a Tree Form -->
-    <section class="plant_tree_section mild">
-      <h1 class="heading2">Plant a Tree Today</h1>
-      <form action="" class="pri form">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Number of Trees">
-        <button class="btn_primary">Donate Now</button>
-      </form>
-    </section>
-
-  </main>
-
-  <footer class="dark">
-    <h3 class="heading2">© 2025 Green Earth. All Rights Reserved.</h3>
-  </footer>
-
-  <!-- Modal (placed once globally at the end of body) -->
-  <div id="plantModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2 id="modalTitle"></h2>
-      <img id="modalImage" alt="Plant Image" />
-      <p><strong>Category:</strong> <span id="modalCategory"></span></p>
-      <p><strong>Price:</strong> <span id="modalPrice"></span></p>
-      <p id="modalDescription"></p>
-    </div>
-  </div>
-
-  <script src="main.js"></script>
+   <script type="module" src="main.js"></script>
 </body>
 </html>
