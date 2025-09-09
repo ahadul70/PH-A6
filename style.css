@@ -111,9 +111,6 @@
 }
 
 
-
-
-
 .tree_cards{
   display: grid;
  grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
@@ -164,7 +161,11 @@
   background-color: rgb(21, 128, 61);
   border-radius: 8px;
 }
-
+.categories li.active-category {
+  background: #2e7d32; /* green */
+  color: white;
+  font-weight: bold;
+}
 
 .pleft, .pright {
   flex: 0 0 20%;
